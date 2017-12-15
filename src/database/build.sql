@@ -9,7 +9,7 @@ CREATE TABLE books (
 );
 
 INSERT INTO books (title, author) VALUES
-('Harry Potter and the Philosopher\'s Stone', 'J. K. Rowling'),
+('Harry Potter and the Philosophers Stone', 'J. K. Rowling'),
 ('The Trial', 'Kafka'),
 ('Twilight', 'Stephenie Meyer');
 
@@ -17,7 +17,7 @@ DROP TABLE IF EXISTS visitors CASCADE;
 
 CREATE TABLE visitors (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
+  name VARCHAR(100) NOT NULL
 );
 
 INSERT INTO visitors (name) VALUES
@@ -35,8 +35,10 @@ CREATE TABLE books_reservation (
   PRIMARY KEY (book_id, visitor_id)
 );
 
-INSERT INTO books_reservation (book_id, visitor_id, reservation_date) VALUES
+INSERT INTO books_reservation (book_id, visitor_id, reservation_date, reservation_period) VALUES
 (1, 1, '1/1/2018', 5),
 (2, 3, '4/1/2018', 3);
 
 COMMIT;
+
+

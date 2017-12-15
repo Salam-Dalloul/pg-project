@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>PG workshop - get users from the database</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Books Reservation</a>
+    </div>
+  </nav>
+  <div class="formFlex">
+    <form class="form" action="/add-book" method="post">
+      <input type="text" name="title" value="" placeholder="Book Name">
+      <input type="text" name="author" value="" placeholder="Book Author">
+      <button class="add" type="submit" name="add">+ Add Book</button>
+    </form>
+    <button id ='existing' class="existing" name="button">View Existing Books</button>
+  </div>
+
+  <div class="table-container" id ='table-container'>
+    <table id="users-table">
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+      </tr>
+    </table>
+  </div>
+  <script type="text/javascript" src="./app.js"></script>
+</body>
+
+</html>
